@@ -93,4 +93,6 @@ jobs:
           build_flags: -trimpath
           ldflags: -s -w -X 'main.Version=${{ github.ref_name }}'
 
+          asset_name: clair-action-${{ matrix.goos }}-${{ matrix.goarch }}
+
           overwrite: true
