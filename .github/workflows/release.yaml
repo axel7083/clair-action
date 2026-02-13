@@ -89,6 +89,7 @@ jobs:
           goarch: ${{ matrix.goarch }}
 
           build_command: go build
-          build_flags: -trimpath -ldflags="-s -w -X 'main.Version=${{ github.ref_name }}'"
+          build_flags: -trimpath
+          ldflags: -s -w -X 'main.Version=${{ github.ref_name }}'
 
           overwrite: true
